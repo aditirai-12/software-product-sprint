@@ -23,10 +23,18 @@ h1 {
 .carousel-item img {
    margin-left: auto;
    margin-right: auto;
-   height: 90vh;
+   height: 70vh;
    width: auto;
+}
+
+.gallery-caption {
+    text-align: center;
 }
 
 .d-block {
     display: block!important;
+}
+
+.intro {
+    text-align: center;
 }
