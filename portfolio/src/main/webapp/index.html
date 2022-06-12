@@ -10,7 +10,38 @@
 
   </head>
   <body>
-    <div id="content">
+    <!--Navbar bootstrap code-->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Aditi Rai's Portfolio</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Personal Links
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/aditirai2020/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/aditirai-12" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+<!--End navbar bootstrap code-->
       <h1>Aditi Rai's Portfolio</h1>
       <br>
       <h2>Introduction</h2>
@@ -22,18 +53,24 @@
       <br>
       <p>Many different aspects of Computer Science have made me fall in love with the subject,
         specifically Machine Learning/Deep Learning, Web Development, and Software Engineering.
-        I also am part of an organization, WECARE, that advocates for increased STEM education
+        I also help lead an organization, WECARE, that advocates for increased STEM education
         for women all around the globe, a topic I'm incredibly passionate about. 
       </p>
       <br>
       <p>
         In my free time, I enjoy going to the gym, watching some TV, and cheering on
-        some Golden State Warriors Basketball. 
+        some Golden State Warriors Basketball. (NBA Finals prediction: Dubs in 6 - June 7, 2022)
       </p>
       <br>
       <h2>Gallery</h2>
       <!--Bootstrap code for carousel-->
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="IMG_1445.jpg" class="d-block img-fluid" alt="Curiosity">
@@ -60,14 +97,19 @@
       <!--End bootstrap code-->
       <br>
       <p class="gallery-caption">
-          Picture 1 in the gallery is just one my friend took of me on my trip to Sedona, AZ. Picture 2 is just the Golden State
-          Warriors logo and pictures 3 and 4 are both from my trip to Sedona (one of the most beautiful places I've been).
+          Picture 1 in the gallery is just one my friend took of me on my trip to Sedona, AZ. Picture 2 is the Golden State
+          Warriors logo and pictures 3 (a cute little bunny I saw in a sideshow) and 4 are both from my trip to Sedona (one of the most beautiful places I've been).
       </p>
       <br>
+      <!--utilizing JavaScript fetch() function -- week 2 step 2-->
+      <button id="motivate" onclick="motivationalQuote()">
+          Click here for a motivational quote!
+      </button>
+
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
     </div>
   </body>
-</html>
+</html>t

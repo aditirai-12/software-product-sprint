@@ -26,3 +26,11 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function motivationalQuote() {
+    const responseFromServer = await fetch('/motivationalQuotes.txt');
+    const textFromResponse = await responseFromServer.text();
+
+    const motivationalQuoteText = document.getElementById('motivate');
+    motivationalQuoteText.innerText = textFromResponse;
+}

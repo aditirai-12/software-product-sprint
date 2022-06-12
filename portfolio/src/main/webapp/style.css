@@ -1,5 +1,5 @@
 body {
-    background-color: lightskyblue;
+    background-color: lightskyblue!important;
 }
 h2 {
     text-align: center;
@@ -37,4 +37,8 @@ h1 {
 
 .intro {
     text-align: center;
+}
+
+.navbar {
+    background-color: #DCAE96;
 }
