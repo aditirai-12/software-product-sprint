@@ -31,6 +31,17 @@ async function motivationalQuote() {
     const responseFromServer = await fetch('/motivationalQuotes.txt');
     const textFromResponse = await responseFromServer.text();
 
-    const motivationalQuoteText = document.getElementById('motivate');
+    const motivationalQuoteText = document.getElementById('motivate-container');
     motivationalQuoteText.innerText = textFromResponse;
+}
+
+async function rolesOutput() {
+    const responseFromServer = await fetch('/roles');
+    const jsonData = await responseFromServer.json();
+
+    const randomText = jsonData[Math.floor(Math.random()*jsonData.length)];
+    console.log(randomText);
+
+    const whereToOutputRole = document.getElementById('roles-container');
+    whereToOutputRole.innerText = randomText;
 }
