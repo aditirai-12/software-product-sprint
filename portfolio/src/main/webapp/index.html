@@ -73,16 +73,16 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="IMG_1445.jpg" class="d-block img-fluid" alt="Curiosity">
+                <img src="images/IMG_1445.jpg" class="d-block img-fluid" alt="Curiosity">
             </div>
           <div class="carousel-item">
-            <img src="gswlogo.png" class="d-block img-fluid" alt="Golden State Warriors">
+            <img src="images/gswlogo.png" class="d-block img-fluid" alt="Golden State Warriors">
           </div>
           <div class="carousel-item">
-            <img src="IMG_1547.jpg" class="d-block img-fluid" alt="bunny">
+            <img src="images/IMG_1547.jpg" class="d-block img-fluid" alt="bunny">
           </div>
           <div class="carousel-item">
-            <img src="IMG_1553.jpg" class="d-block img-fluid" alt="Sedona">
+            <img src="images/IMG_1553.jpg" class="d-block img-fluid" alt="Sedona">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -102,9 +102,23 @@
       </p>
       <br>
       <!--utilizing JavaScript fetch() function -- week 2 step 2-->
-      <button id="motivate" onclick="motivationalQuote()">
+      <button onclick="motivationalQuote()">
           Click here for a motivational quote!
       </button>
+      <div id="motivate-container"></div>
+
+      <form action="/form-handler" method="POST">
+        <p>Leave your email below!</p>
+        <textarea name="text-input"></textarea>
+        <br/>
+        <input type="submit" onclick="sentEmail()"/>
+      </form>
+      <div id="successful-submission"></div>
+
+      <p>Click <a href="/roles">here</a> to see what titles I take!</p>
+      <p>Click on this button to see a random output of my roles!</p>
+      <button onclick="rolesOutput()">This is me!</button>
+      <div id="roles-container"></div>
 
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
@@ -112,4 +126,4 @@
       <div id="greeting-container"></div>
     </div>
   </body>
-</html>t
+</html>

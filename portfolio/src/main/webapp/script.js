@@ -34,3 +34,8 @@ async function motivationalQuote() {
     const motivationalQuoteText = document.getElementById('motivate');
     motivationalQuoteText.innerText = textFromResponse;
 }
+
+async function sentEmail() {
+    const addElement = document.getElementById('successful-submission');
+    addElement.innerText = "Thanks for submitting your email! Look out for a message in your inbox soon."
+}
