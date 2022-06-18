@@ -5,9 +5,9 @@
     <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <!--Navbar bootstrap code-->
@@ -101,8 +101,12 @@
           Warriors logo and pictures 3 (a cute little bunny I saw in a sideshow) and 4 are both from my trip to Sedona (one of the most beautiful places I've been).
       </p>
       <br>
-    
-      <!--utilizing JavaScript fetch() function -- week 2 step 2-->
+
+      <!--Using google chrts library-->
+      <div id="chart-container"></div>
+      <br>
+
+      <!--utilizing JavaScript fetch() function -->
       <button onclick="motivationalQuote()">
           Click here for a motivational quote!
       </button>
