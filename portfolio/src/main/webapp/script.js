@@ -35,7 +35,44 @@ async function motivationalQuote() {
     motivationalQuoteText.innerText = textFromResponse;
 }
 
+async function rolesOutput() {
+    const responseFromServer = await fetch('/roles');
+    const jsonData = await responseFromServer.json();
+
+    const randomText = jsonData[Math.floor(Math.random()*jsonData.length)];
+
+    const whereToOutputRole = document.getElementById('roles-container');
+    whereToOutputRole.innerText = randomText;
+}
+
 async function sentEmail() {
     const addElement = document.getElementById('successful-submission');
     addElement.innerText = "Thanks for submitting your email! Look out for a message in your inbox soon."
+}
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+/** Creates a chart and adds it to the page. */
+function drawChart() {
+  const data = new google.visualization.DataTable();
+  data.addColumn('string', 'Programming Language');
+  data.addColumn('number', 'Years Coding');
+        data.addRows([
+          ['C/C++', 4],
+          ['Java', 3],
+          ['HTMl/CSS', 1],
+          ['JavaScript', 1],
+          ['Python', 0.5]
+        ]);
+
+  const options = {
+    'title': 'My Experience in Programming Languages',
+    'width':500,
+    'height':400
+  };
+
+  const chart = new google.visualization.PieChart(
+      document.getElementById('chart-container'));
+  chart.draw(data, options);
 }
